@@ -1,0 +1,9 @@
+<h1>{{ cerveja.nome }}</h1>
+<button class="del" title="Excluir" ng-click="fnFechar()"></button>
+<img ng-src="{{ cerveja.cartaz }}" alt="Cartaz da cerveja {{ cerveja.nome }}">
+<ul>
+	<li><strong>Fabricante:</strong> {{ cerveja.fabricante }}</li>
+	<li><strong>Tipo:</strong> {{ cerveja.tipo }}</li>
+	<li><strong>Embalagem:</strong> {{ cerveja.embalagem }}</li>
+</ul>
+<p>{{ cerveja.descricao }}</p>

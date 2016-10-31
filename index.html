@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="cervejas">
+<head>
+	<meta charset="UTF-8">
+    <title>Cervejas que já bebi</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.min.js"></script>
+	<script src="js/cervejas.module.js"></script>
+	<script src="js/cervejas.controller.js"></script>
+	<script src="js/cervejas.directive.js"></script>
+	<script src="js/spark-md5.js"></script>
+	<script src="js/spark-md5.min.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="CervejasController">
+		<h1>{{ titulo }}</h1>
+		
+		<div class="lista-cervejas">
+			<div aw-cerveja="c" fn-fechar="removerCerveja(c.id)" ng-repeat="c in cervejas"></div>
+		</div>
+		<hr>
+		<form name="form" class="form-cervejas" ng-submit="adicionarCerveja()">
+			<h1>Adicionar Cerveja</h1>
+			<div class="form-campo">
+				<label for="nome">Nome</label>
+				<input type="text" id="nome" ng-model="novaCerveja.nome">
+			</div>
+			<div class="form-campo medio">
+				<label for="fabricante">Fabricante</label>
+				<input type="text" id="fabricante" ng-model="novaCerveja.fabricante">
+			</div>
+			<div class="form-campo medio">
+				<label for="tipo">Tipo</label>
+				<input type="text" id="tipo" ng-model="novaCerveja.tipo">
+			</div>
+			<div class="form-campo medio">
+				<label for="embalagem">Embalagem</label>
+				<input type="text" id="embalagem" ng-model="novaCerveja.embalagem">
+			</div>
+			<div class="form-campo">
+				<label for="cartaz">Url do Cartaz</label>
+				<input type="text" id="cartaz" ng-model="novaCerveja.cartaz">
+			</div>
+			<div class="form-campo">
+				<label for="descricao">Descrição</label>
+				<textarea id="descricao" rows="5" ng-model="novaCerveja.descricao"></textarea>
+			</div>
+			<footer>
+				<button type="reset">Limpar</button>
+				<button type="submit">Salvar</button>
+			</footer>
+		</form>
+	</div>
+		
+	 
+</body>
+</html>
