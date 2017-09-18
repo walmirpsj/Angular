@@ -1,1 +1,1 @@
-# Projeto em Angular de cadastros de cervejas com diretivas.
+# Projeto em AngularJS de cadastros de cervejas com diretivas.
